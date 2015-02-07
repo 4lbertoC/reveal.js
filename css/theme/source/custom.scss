@@ -66,26 +66,31 @@ section.has-light-background {
   0% {
     color: white;
     text-shadow: 0px 0px 4px white;
+    top: 0;
   }
 
   25% {
     color: #FFA;
     text-shadow: 0px 0px 10px #FFA;
+    top: -10px;
   }
 
   50% {
     color: #FAF;
     text-shadow: 0px 0px 10px #FAF;
+    top: 0;
   }
 
   75% {
     color: #AFF;
     text-shadow: 0px 0px 10px #AFF;
+    top: -10px;
   }
 
   100% {
     color: white;
     text-shadow: 0px 0px 4px white;
+    top: 0px;
   }
 }
 
@@ -97,6 +102,7 @@ section.has-light-background {
 	-webkit-animation-duration: 20s;
 	-webkit-animation-name: glow;
 	-webkit-animation-iteration-count: infinite;
+	position: relative;
 }
 
 .guerra-santa {
