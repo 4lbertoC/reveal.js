@@ -21,14 +21,7 @@ $.fn.sparkleh = function( options ) {
     
     var sparkle = new Sparkle( $this, settings );
     
-    $this.on({
-      "mouseover focus" : function(e) {
-        sparkle.over();
-      },
-      "mouseout blur" : function(e) {
-        sparkle.out();
-      }
-    });
+    sparkle.over();
     
   });
   
