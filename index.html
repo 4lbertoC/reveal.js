@@ -40,14 +40,14 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="sparkley">
+				<section>
 					<p>
 						&nbsp;
 					</p>
 					<p>
 						&nbsp;
 					</p>
-					<h1>Javascript Black Magic</h1>
+					<h1 class="sparkley black-magic">Javascript Black Magic</h1>
 					<p>
 						<span class="guerra-santa">Brewed by <a href="http://albertocongiu.com">Alberto Congiu</a> (<a href="http://twitter.com/4lbertoC">@4lbertoC</a>)</span>
 					</p>
@@ -64,6 +64,113 @@
 					<p>
 						<a href="https://www.destroyallsoftware.com/talks/wat">https://www.destroyallsoftware.com/talks/wat</a>
 					</p>
+				</section>
+
+				<section>
+					<code class="bigger">undefined</code>
+
+					<aside class="notes">
+						undefined is a property of the global scope with value undefined.
+						undefined is not a reserved word and can be used as a variable name.
+						this is the reason why you will sometimes find an IIFE like this:
+						(function($, window, undefined) {
+						    // your code where undefined is undefined
+						})(jQuery, this);
+						This way we are sure that undefined is undefined.
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<code class="bigger">[]</code>
+
+						<aside class="notes">
+							typeof [] will return "object".
+							Object.prototype.toString.call(arg) === '[object Array]'
+
+							Problem with instanceof Array:
+							var iframe = document.createElement('iframe');
+							document.body.appendChild(iframe);
+							xArray = window.frames[window.frames.length-1].Array;
+							var arr = new xArray(1,2,3); // [1,2,3]
+
+							// Boom!
+							arr instanceof Array; // false
+
+							// Boom!
+							arr.constructor === Array; // false
+						</aside>
+					</section>
+
+					<section>
+						<iframe src="iframe.html"></iframe>
+					</section>
+
+					<section>
+						<code class="bigger">Array.isArray()</code>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<code class="bigger">null</code>
+
+						<aside class="notes">
+							typeof null will return "object".
+							Because the spec says so.
+						</aside>
+					</section>
+
+					<section>
+						<img src="img/typeof-null.png" />
+					</section>
+
+					<section>
+						<img src="img/null.png" />
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<code class="bigger">NaN</code>
+
+						<aside class="notes">
+
+						</aside>
+					</section>
+
+					<section>
+						<code class="bigger">isNaN()</code>
+					</section>
+
+				</section>
+
+				<section>
+					<code class="bigger">==</code>
+
+					<aside class="notes">
+
+					</aside>
+
+				</section>
+
+				<section>
+					<h2></h2>
+
+					<aside class="notes">
+
+					</aside>
+
+				</section>
+
+				<section>
+					<h2></h2>
+
+					<aside class="notes">
+
+					</aside>
+
 				</section>
 
 				<section>
@@ -335,12 +442,6 @@ function linkify( selector ) {
 					<aside class="notes">
 						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 				</section>
 
 				<section>
