@@ -332,8 +332,49 @@ body {
   display: inline-block; }
 
 .bigger {
-  font-size: 2em !important; }
+  font-size: 2em !important;
+  line-height: 1.5 !important; }
 
 .ifraem {
   width: 800px;
   height: 700px; }
+
+.flare-dalema {
+  position: absolute;
+  left: -40%;
+  top: -50%;
+  max-width: none !important;
+  max-height: none !important; }
+
+.appway-logo {
+  position: absolute;
+  left: 15%;
+  bottom: 15%;
+  transform: rotateZ(10deg);
+  zoom: 0.7; }
+
+.sheep {
+  position: absolute;
+  left: 0;
+  transform: rotateZ(20deg);
+  top: 30%; }
+
+.cow {
+  position: absolute;
+  left: 5%;
+  top: 40%;
+  transform: rotate(-10deg); }
+
+.swans {
+  position: absolute;
+  width: 40%;
+  left: 65%;
+  transform: rotate(10deg);
+  bottom: 10%; }
+
+.gdg-milano-small {
+  position: absolute;
+  bottom: 5%;
+  right: 18%;
+  background: white !important;
+  transform: rotate(-10deg); }
