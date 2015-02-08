@@ -67,6 +67,47 @@
 				</section>
 
 				<section>
+					<img src="img/eich-fire.jpg" />
+				</section>
+
+				<section>
+					<section>
+						<code class="bigger">[]</code>
+
+						<aside class="notes">
+							[] == 0
+							true
+							[] == ''
+							true
+							[] == ![]
+							true
+							[] == []
+							false
+							typeof []
+							"object"
+							[] == {}
+							false
+							[] instanceof Array
+							true
+							[].constructor == Array
+							true
+							Object.prototype.toString.call([])
+							"[object Array]"
+
+							window.frames[0].testArray
+						</aside>
+					</section>
+
+					<section>
+						<iframe src="iframe.html" class="ifraem"></iframe>
+					</section>
+
+					<section>
+						<code class="bigger">Array.isArray()</code>
+					</section>
+				</section>
+
+				<section>
 					<code class="bigger">undefined</code>
 
 					<aside class="notes">
@@ -78,37 +119,6 @@
 						})(jQuery, this);
 						This way we are sure that undefined is undefined.
 					</aside>
-				</section>
-
-				<section>
-					<section>
-						<code class="bigger">[]</code>
-
-						<aside class="notes">
-							typeof [] will return "object".
-							Object.prototype.toString.call(arg) === '[object Array]'
-
-							Problem with instanceof Array:
-							var iframe = document.createElement('iframe');
-							document.body.appendChild(iframe);
-							xArray = window.frames[window.frames.length-1].Array;
-							var arr = new xArray(1,2,3); // [1,2,3]
-
-							// Boom!
-							arr instanceof Array; // false
-
-							// Boom!
-							arr.constructor === Array; // false
-						</aside>
-					</section>
-
-					<section>
-						<iframe src="iframe.html"></iframe>
-					</section>
-
-					<section>
-						<code class="bigger">Array.isArray()</code>
-					</section>
 				</section>
 
 				<section>
