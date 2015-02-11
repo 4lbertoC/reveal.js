@@ -346,13 +346,6 @@ body {
   max-width: none !important;
   max-height: none !important; }
 
-.appway-logo {
-  position: absolute;
-  left: 15%;
-  bottom: 15%;
-  transform: rotateZ(10deg);
-  zoom: 0.7; }
-
 .sheep {
   position: absolute;
   left: 0;
@@ -362,19 +355,31 @@ body {
 .cow {
   position: absolute;
   left: 5%;
-  top: 40%;
+  top: 50%;
   transform: rotate(-10deg); }
 
-.swans {
+.appway-logo {
   position: absolute;
+  left: 15%;
+  bottom: 5%;
+  transform: rotateZ(10deg);
+  zoom: 0.7; }
+
+.pigeon {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
   width: 40%;
-  left: 65%;
-  transform: rotate(10deg);
-  bottom: 10%; }
+  transform: rotate(-10deg); }
 
 .gdg-milano-small {
   position: absolute;
   bottom: 5%;
-  right: 18%;
+  right: 0;
   background: white !important;
-  transform: rotate(-10deg); }
+  transform: rotate(10deg); }
+
+.food0 {
+  position: absolute;
+  left: 10%;
+  transform: rotateZ(10deg); }
