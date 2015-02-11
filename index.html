@@ -60,6 +60,15 @@
 				</section>
 
 				<section>
+					<img src="img/alberto.jpg" />
+					<img src="img/sheep.jpg" class="fragment sheep" />
+					<img src="img/cow.jpg" class="fragment cow" />
+					<img src="img/appway.png" class="fragment appway-logo"/>
+					<img src="img/pigeon-photobombing-duomo-milan.jpg" class="fragment pigeon" />
+					<img src="img/GDG-Milano-square.png" class="fragment gdg-milano-small" />
+				</section>
+
+				<section>
 					<img src="img/wat.png">
 					<p>
 						<a href="https://www.destroyallsoftware.com/talks/wat">https://www.destroyallsoftware.com/talks/wat</a>
@@ -67,58 +76,117 @@
 				</section>
 
 				<section>
-					<code class="bigger">undefined</code>
-
-					<aside class="notes">
-						undefined is a property of the global scope with value undefined.
-						undefined is not a reserved word and can be used as a variable name.
-						this is the reason why you will sometimes find an IIFE like this:
-						(function($, window, undefined) {
-						    // your code where undefined is undefined
-						})(jQuery, this);
-						This way we are sure that undefined is undefined.
-					</aside>
+					<img src="img/javascript_1.jpg" class="fragment" style="zoom: 1.5;" />
+					<img src="img/food/0.jpg" class="fragment food0"/>
 				</section>
 
 				<section>
-					<section>
-						<code class="bigger">[]</code>
+					<img src="img/eich-fire.jpg" class="fragment" />
+				</section>
+
+				<section>
+					<img src="img/wat/no-time-to-explain.jpg" />
+				</section>
+
+				<section>
+					<section data-background="img/bg/Vudu.jpg">
+						<code class="bigger" style="font-size: 7em !important; text-shadow: 0 0 20px black;">[ ]</code>
 
 						<aside class="notes">
-							typeof [] will return "object".
-							Object.prototype.toString.call(arg) === '[object Array]'
+							[] == 0
+							true
+							[] == ''
+							true
+							[] == ![]
+							true
+							[] == []
+							false
+							typeof []
+							"object"
+							[] == {}
+							false
+							[] instanceof Array
+							true
+							[].constructor == Array
+							true
+							Object.prototype.toString.call([])
+							"[object Array]"
 
-							Problem with instanceof Array:
-							var iframe = document.createElement('iframe');
-							document.body.appendChild(iframe);
-							xArray = window.frames[window.frames.length-1].Array;
-							var arr = new xArray(1,2,3); // [1,2,3]
-
-							// Boom!
-							arr instanceof Array; // false
-
-							// Boom!
-							arr.constructor === Array; // false
+							window.frames[0].testArray
 						</aside>
 					</section>
 
 					<section>
-						<iframe src="iframe.html"></iframe>
+						<iframe src="iframe.html" class="ifraem"></iframe>
 					</section>
 
 					<section>
-						<code class="bigger">Array.isArray()</code>
+						<p>&nbsp;</p>
+						<pre><code style="font-size: 1.5em !important; line-height: 1.1;">&gt; Object.prototype.toString.call([])
+"[object Array]"</code></pre>
+						<img src="img/not-sure-if-hack.jpg" class="fragment" style="width: 60% !important;" />
+					</section>
+
+					<section data-background="img/bg/sky.jpg">
+						<code class="bigger" style="text-shadow: 0 0 20px black;">Array.isArray()</code>
 					</section>
 				</section>
 
 				<section>
-					<section>
-						<code class="bigger">null</code>
+					<section data-background="img/bg/Wizard_of_Christchurch.JPG">
+						<code class="bigger" style="text-shadow: 0 0 20px black;">undefined</code>
 
 						<aside class="notes">
-							typeof null will return "object".
+							undefined is a property of the global scope with value undefined.
+							undefined is not a reserved word and can be used as a variable name.
+							(function () {
+								var undefined = 'i am defined!';
+								return undefined;
+							})()
+							or
+							var a = {undefined: 'lol'};
+							this is the reason why you will sometimes find an IIFE like this:
+							(function($, window, undefined) {
+							    // your code where undefined is undefined
+							})(jQuery, this);
+							This way we are sure that undefined is undefined.
+						</aside>
+					</section>
+					<section>
+						<img src="img/jsfire.png" class="image-plain flare-dalema"/>
+						<img src="img/wat/dalema.jpg" style="float:right;"/>
+					</section>
+					<section>
+						<pre><code class="bigger" style="word-wrap: break-word;">(function($, window, undefined) {
+    // your code
+})(jQuery, this);</code></pre>
+						<img src="img/fixed.jpg" class="fragment" />
+					</section>
+				</section>
+
+				<section>
+					<section data-background="img/bg/Magic_potion-Halloween_Illustration_Design_Wallpaper_1440x900.jpg">
+						<code class="bigger" style="text-shadow: 0 0 20px black;">null</code>
+
+						<aside class="notes">
+							null == undefined
+							true
+							null + null
+							0
+							null + 'a'
+							"nulla"
+							{} - [] == null + null
+							true
+							null + null == {} - []
+							false
+							typeof null
+							"object"
 							Because the spec says so.
 						</aside>
+					</section>
+
+					<section>
+						<img src="img/because-i-said-so.jpg" style="width: 80%;" />
 					</section>
 
 					<section>
@@ -127,16 +195,34 @@
 
 					<section>
 						<img src="img/null.png" />
+						<img src="img/wat/aliens-javascript.jpg" class="fragment" style="width: 60%;" />
 					</section>
 
 				</section>
 
 				<section>
-					<section>
-						<code class="bigger">NaN</code>
+					<section data-background="img/bg/6994140-halloween-witch.jpg">
+						<code class="bigger" style="text-shadow: 0 0 20px black;">NaN</code>
 
 						<aside class="notes">
-
+							{} - []
+							-0
+							(1)
+							1
+							(null)
+							null
+							(function() {})
+							function () {}
+							([])
+							[]
+							({})
+							Object {}
+							{} - []
+							-0
+							({} - [])
+							NaN
+							typeof NaN
+							"number"
 						</aside>
 					</section>
 
@@ -147,7 +233,28 @@
 				</section>
 
 				<section>
-					<code class="bigger">==</code>
+					<section>
+						<pre><code class="bigger" style="word-wrap: break-word;">ohai();
+function ohai() {
+	alert('ohai');
+}</code></pre>
+						<aside class="notes">
+
+						</aside>
+					</section>
+					<section>
+						<img src="img/ictehfuchur.jpg">
+					</section>
+				</section>
+
+				<section>
+					<pre><code style="word-wrap: break-word;">function Person(name, surname) {
+    this.name = name;
+    this.surname = surname;
+}
+
+var person1 = new Person('Alberto', 'Congiu');
+var person2 = Person('Maurizio', 'Mangione');</code></pre>
 
 					<aside class="notes">
 
@@ -156,7 +263,7 @@
 				</section>
 
 				<section>
-					<h2></h2>
+					<code class="bigger">==</code>
 
 					<aside class="notes">
 

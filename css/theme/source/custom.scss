@@ -134,4 +134,62 @@ section.has-light-background {
 
 .bigger {
 	font-size: 2em !important;
+	line-height: 1.5 !important;
+}
+
+.ifraem {
+	width: 800px;
+	height: 700px;
+}
+
+.flare-dalema {
+	position: absolute;
+	left: -40%;
+	top: -50%;
+	max-width: none !important;
+	max-height: none !important;
+}
+
+.sheep {
+	position: absolute;
+	left: 0;
+	transform: rotateZ(20deg);
+	top: 30%;
+}
+
+.cow {
+	position: absolute;
+	left: 5%;
+	top: 50%;
+	transform: rotate(-10deg);
+}
+
+.appway-logo {
+	position: absolute;
+	left: 15%;
+	bottom: 5%;
+	transform: rotateZ(10deg);
+	zoom: 0.7;
+}
+
+.pigeon {
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	width: 40%;
+	transform: rotate(-10deg);
+}
+
+.gdg-milano-small {
+	position: absolute;
+	bottom: 5%;
+	right: 0;
+	background: white !important;
+	transform: rotate(10deg);
+}
+
+.food0 {
+	position:absolute;
+	left: 10%;
+	transform: rotateZ(10deg);
 }
