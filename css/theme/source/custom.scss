@@ -193,3 +193,24 @@ section.has-light-background {
 	left: 10%;
 	transform: rotateZ(10deg);
 }
+
+.javascript-books {
+	position: absolute;
+	left: 8%;
+	top: 25%;
+	transform: rotateZ(5deg);
+}
+
+.toilet-cat {
+	position: absolute;
+	top: 30%;
+	left: 20%;
+}
+
+.random-food {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	z-index: 100000000;
+}

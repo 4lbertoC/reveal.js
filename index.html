@@ -81,15 +81,13 @@
 
 				<section>
 					<img src="img/javascript_1.jpg" class="fragment" style="zoom: 1.5;" />
-					<img src="img/food/0.jpg" class="fragment food0"/>
+					<img src="img/food/-1.jpg" class="fragment food0"/>
 				</section>
 
 				<section>
 					<img src="img/eich-fire.jpg" class="fragment" />
-				</section>
-
-				<section>
-					<img src="img/wat/no-time-to-explain.jpg" />
+					<img src="img/javascript-books.jpg" class="fragment javascript-books" />
+					<img src="img/wat/no-time-to-explain.jpg" class="fragment toilet-cat" />
 				</section>
 
 				<section>
@@ -615,6 +613,10 @@ Reveal.addEventListener( 'customevent', function() {
 
 		<script>
 
+			var foodImage;
+			var foodImageIdx = -1;
+			var maxFoodImages = 8;
+
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -633,7 +635,21 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
-				]
+				],
+
+				keyboard: {
+					70: function() {
+						if(!foodImage) {
+							foodImageIdx = (foodImageIdx + 1) % maxFoodImages;
+							foodImage = $('<img src="img/food/' + foodImageIdx + '.jpg" class="random-food"/>');
+							foodImage.css('transform', 'rotateZ(' + ((Math.random() * 20) - 10) + 'deg)');
+							$('body').append(foodImage);
+						} else {
+							foodImage.remove();
+							foodImage = undefined;
+						}
+					}
+				}
 			});
 
 		</script>
