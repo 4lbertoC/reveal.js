@@ -19,23 +19,23 @@ var winner = undefined;
 
 io.sockets.on('connection', function(socket) {
 	console.log('new connection!');
-	socket.emit('trivia-registered', {triviaClientId: registeredIds++});
+	socket.emit('quizjs-registered', {quizJsClientId: registeredIds++});
 
-	socket.on('trivia-button-pressed', function(data) {
+	socket.on('quizjs-button-pressed', function(data) {
 		if(typeof winner === 'undefined') {
-			winner = data.triviaClientId;
+			winner = data.quizJsClientId;
 			console.log(winner + ' is winner!');
 		}
 
 		var data = {
 			socketId: data.socketId,
-			triviaClientId: winner
+			quizJsClientId: winner
 		}
 
-		io.sockets.emit('trivia-button-result', data);
+		io.sockets.emit('quizjs-button-result', data);
 	});
 
-	socket.on('trivia-reset-requested', function(data) {
+	socket.on('quizjs-reset-requested', function(data) {
 		winner = undefined;
 
 		console.log('winner reset');
@@ -43,7 +43,7 @@ io.sockets.on('connection', function(socket) {
 			socketId: data.socketId
 		}
 
-		io.sockets.emit('trivia-reset', data);
+		io.sockets.emit('quizjs-reset', data);
 	});
 });
 

@@ -59,7 +59,7 @@
 					</p>
 
 					<aside class="notes">
-						how many program in javascript?
+						how many of you program in javascript?
 					</aside>
 				</section>
 
@@ -282,62 +282,21 @@ function ohai() {
 		</div>
 
 		<img src="img/GDG-Milano-white.png" class="image-plain gdg-logo">
+		
+		<div class="quizjs-url">
+			<a>tr.im/Ksuds</a>
+		</div>
+		<div class="quizJsSpeakerId"></div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 		<script src="lib/js/jquery.min.js"></script>
 		<script src="js/sparkleh.js"></script>
+		<script src="js/food.js"></script>
+		<script src="node_modules/socket.io-client/socket.io.js"></script>
+		<script src="js/quizjs-master.js"></script>
 
-		<script>
-
-			var foodImage;
-			var foodImageIdx = -1;
-			var maxFoodImages = 8;
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				],
-
-				keyboard: {
-					70: function() {
-						if(!foodImage) {
-							foodImageIdx = (foodImageIdx + 1) % maxFoodImages;
-							foodImage = $('<img src="img/food/' + foodImageIdx + '.jpg" class="random-food"/>');
-							foodImage.css('transform', 'rotateZ(' + ((Math.random() * 20) - 10) + 'deg)');
-							$('body').append(foodImage);
-						} else {
-							foodImage.remove();
-							foodImage = undefined;
-						}
-					}
-				}
-			});
-
-		</script>
-
-		<script>
-
-			$(window).load(function() {
-				$('.sparkley').sparkleh();
-			});
-
-		</script>
+		<script src="js/main.js"></script>
 
 	</body>
 </html>
