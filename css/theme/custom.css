@@ -397,7 +397,7 @@ body {
 
 .random-food {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 10%;
   width: 80%;
   z-index: 100000000; }
