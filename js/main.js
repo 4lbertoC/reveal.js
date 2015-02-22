@@ -1,6 +1,6 @@
 (function() {
 
-	var quizJsSpeakerIdElement = $('.quizJsSpeakerId');
+	var quizJsSpeakerIdElement = $('.quizjs-speakerid');
 
 	function onQuizJsStatusUpdate(data) {
 		quizJsSpeakerIdElement.show();
