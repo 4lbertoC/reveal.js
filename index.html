@@ -64,6 +64,13 @@
 				</section>
 
 				<section>
+					<div style="font-family: cursive; font-size: 0.8em;">
+						Any sufficiently advanced technology is indistinguishable from magic.
+						<div style="text-align: right; margin-top: 20px;">– Arthur C. Clarke</div>
+					</div>
+				</section>
+
+				<section>
 					<img src="img/alberto.jpg" />
 					<img src="img/sheep.jpg" class="fragment sheep" />
 					<img src="img/cow.jpg" class="fragment cow" />
@@ -85,7 +92,15 @@
 				</section>
 
 				<section>
-					<img src="img/eich-fire.jpg" class="fragment" />
+					<p class="big-question-mark">?</p>
+
+					<aside class="notes">
+						Who is this guy?
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/eich-fire.jpg" />
 					<img src="img/javascript-books.jpg" class="fragment javascript-books" />
 					<img src="img/wat/no-time-to-explain.jpg" class="fragment toilet-cat" />
 				</section>
@@ -119,6 +134,14 @@
 					</section>
 
 					<section>
+						<p class="big-question-mark">?</p>
+
+						<aside class="notes">
+							When doesn't 'instanceof Array' work?
+						</aside>
+					</section>
+
+					<section>
 						<iframe src="iframe.html" class="ifraem"></iframe>
 					</section>
 
@@ -127,6 +150,14 @@
 						<pre><code style="font-size: 1.5em !important; line-height: 1.1;">&gt; Object.prototype.toString.call([])
 "[object Array]"</code></pre>
 						<img src="img/not-sure-if-hack.jpg" class="fragment" style="width: 60% !important;" />
+					</section>
+
+					<section>
+						<p class="big-question-mark">?</p>
+
+						<aside class="notes">
+							What function should you call to check if a variable is an array?
+						</aside>
 					</section>
 
 					<section data-background="img/bg/sky.jpg">
@@ -164,6 +195,15 @@
 })(jQuery, this);</code></pre>
 						<img src="img/fixed.jpg" class="fragment" />
 					</section>
+
+					<section>
+						<p class="big-question-mark">?</p>
+
+						<aside class="notes">
+							Who can tell me another way to get undefined?
+						</aside>
+					</section>
+
 				</section>
 
 				<section>
@@ -184,6 +224,14 @@
 							typeof null
 							"object"
 							Because the spec says so.
+						</aside>
+					</section>
+
+					<section>
+						<p class="big-question-mark">?</p>
+
+						<aside class="notes">
+							Who knows why typeof null == 'object'?
 						</aside>
 					</section>
 
@@ -213,26 +261,46 @@
 							<img src="img/obama-ok.jpg" />
 						</p>
 						<aside class="notes">
-							NaN is not a reserved word
 							[] - {}
+							NaN
+							parseInt('asd')
 							NaN
 							NaN == NaN
 							false
 							typeof NaN
 							"number"
+							NaN is not a reserved word
 							isNaN(2)
 							false
+							isNaN(NaN)
+							true
 							isNaN({})
 							true
+							isNaN(undefined)
+							true
+							isNaN('ciao')
+							true
+							isNaN(null)
+							false
 							isNaN('10')
 							false
 							isNaN(' ')
+							false
+							isNaN([])
 							false
 						</aside>
 					</section>
 
 					<section>
 						<img src="img/wat/quadruple-facepalm.jpg" style="zoom: 1.5;" />
+					</section>
+
+					<section>
+						<p class="big-question-mark">?</p>
+
+						<aside class="notes">
+							What new method solves this problem?
+						</aside>
 					</section>
 
 					<section data-background="img/bg/saviour.jpg">
@@ -242,6 +310,14 @@
 				</section>
 
 				<section>
+					<section>
+						<p class="big-question-mark">?</p>
+
+						<aside class="notes">
+							Does this code work and why?
+						</aside>
+					</section>
+
 					<section>
 						<pre><code class="bigger" style="word-wrap: break-word;">ohai();
 function ohai() {
