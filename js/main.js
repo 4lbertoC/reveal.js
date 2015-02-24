@@ -4,7 +4,8 @@
 
 	function onQuizJsStatusUpdate(data) {
 		quizJsSpeakerIdElement.show();
-		quizJsSpeakerIdElement.text(data.speakerId || '-');
+		var speakerId = typeof data.speakerId === 'number' && ('' + data.speakerId);
+		quizJsSpeakerIdElement.text(speakerId || '-');
 	}
 
 	function onQuizJsStatusReset() {
